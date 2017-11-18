@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="build/kalendae.css" type="text/css" charset="utf-8">
+<!-- <script src="src/moment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="build/kalendae.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="build/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.kalendae .k-days span.closed {
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Group Calender</h1>
+	<script type="text/javascript" charset="utf-8">
+		new Kalendae({
+			attachTo:document.body,
+			months:12,
+			mode:'multiple',
+			selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+		});
+
+	</script>
+
+
+
+	<hr>
+	
+	Select the date: <input type="text" value="2/16/2012" id="input2">
+	<script type="text/javascript" charset="utf-8">
+		var k4 = new Kalendae.Input('input2', {
+			months:1,
+			closeOnSelection: true
+		});
+	</script>
+
+	
+	
+	
+
+	
+</body>
+</html>
